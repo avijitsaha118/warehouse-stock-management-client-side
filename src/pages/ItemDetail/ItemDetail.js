@@ -66,8 +66,6 @@ const ItemDetail = () => {
     }
 
 
-
-
     return (
         <div>
 
@@ -95,9 +93,9 @@ const ItemDetail = () => {
                     Update Qunatity of {item.name}
 
                 </h2>
-                
-            <UpdateStock></UpdateStock>
-            
+
+                <UpdateStock></UpdateStock>
+
             </div>
 
 

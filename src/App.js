@@ -14,6 +14,7 @@ import ManageItems from './pages/ManageItems/ManageItems';
 import Footer from './shared/Footer/Footer';
 import AddMyItem from './pages/AddMyItem/AddMyItem';
 import MyItem from './pages/MyItem/MyItem';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -52,6 +53,8 @@ function App() {
             <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
       <Footer></Footer>
