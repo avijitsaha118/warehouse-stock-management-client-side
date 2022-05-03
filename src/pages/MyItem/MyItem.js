@@ -1,4 +1,6 @@
 import { async } from '@firebase/util';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
@@ -41,6 +43,23 @@ const MyItem = () => {
     }, [user])
 
 
+    const [items, setItems] = useItems();
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/item/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = myItems.filter(item => item._id !== id);
+                    setMyItems(remaining);
+                })
+        }
+    }
+
     return (
         <div>
             <h2>
@@ -48,12 +67,23 @@ const MyItem = () => {
                
             </h2>
             <div className='item-container'>
-                {
+
+            {
+                myItems.map(item => <div key={item._id}>
+                    <h4>{item.name}
+                        <button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button>
+                    </h4>
+                </div>
+                )
+            }
+               
+
+                {/* {
                     myItems.map(item => <MyItems
                         key={item._id}
                         item={item}
                     ></MyItems>)
-                }
+                } */}
             </div>
         </div>
     );

@@ -39,10 +39,10 @@ const UpdateStock = () => {
 
     return (
         <div>
-            <h2>
+            {/* <h2>
                 Update Qunatity of {item.name}
 
-            </h2>
+            </h2> */}
             <form onSubmit={handleUpdateItem}>
                 <input type='number' name='quantity' placeholder='Quantity' required></input>
                 <br />

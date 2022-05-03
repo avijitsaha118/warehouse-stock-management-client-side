@@ -21,6 +21,7 @@ const MyItems = ({item}) => {
         }
     }
 
+    //test component...will be deleted ..no connection with other component
 
     return (
         <div>

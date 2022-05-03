@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
+//test component.. deleted soon.
+
+
 const Delivered = () => {
     const { itemId } = useParams();
     // console.log(itemId);
