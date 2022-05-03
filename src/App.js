@@ -1,24 +1,62 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './shared/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home/Home';
+import Login from './pages/Login/Login/Login';
+import Register from './pages/Register/Register';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
+import AddItem from './pages/Home/AddItem/AddItem';
+import Item from './pages/Home/Item/Item';
+import Items from './pages/Home/Items/Items';
+import ItemDetail from './pages/ItemDetail/ItemDetail';
+import ManageItems from './pages/ManageItems/ManageItems';
+import Footer from './shared/Footer/Footer';
+import AddMyItem from './pages/AddMyItem/AddMyItem';
+import MyItem from './pages/MyItem/MyItem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/item/:itemId' element={
+<RequireAuth>
+<ItemDetail></ItemDetail>
+</RequireAuth>
+
+        }></Route>
+        <Route path='/items' element={<Items></Items>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+        
+        <Route path='/item/myitem' element={
+          <RequireAuth><AddMyItem></AddMyItem></RequireAuth>
+        }></Route>
+        
+<Route path='/myitems' element={<RequireAuth>
+  <MyItem></MyItem>
+</RequireAuth>}></Route>
+
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        }></Route>
+
+<Route path='/manage' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
+          </RequireAuth>
+        }></Route>
+
+      </Routes>
+      <Footer></Footer>
+
+    </>
   );
 }
 
