@@ -13,15 +13,15 @@ const HomeItem = ({ item }) => {
     return (
         <div>
 
-            <div class="a-box">
-                <div class="img-container">
-                    <div class="img-inner">
-                        <div class="inner-skew">
+            <div className="a-box">
+                <div className="img-container">
+                    <div className="img-inner">
+                        <div className="inner-skew">
                             <img src={img}/>
                         </div>
                     </div>
                 </div>
-                <div class="text-container">
+                <div className="text-container">
                     <h3>{name}</h3>
                     <div>
                         <p><smal>{description}</smal></p>

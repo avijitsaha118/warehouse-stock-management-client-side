@@ -1,6 +1,7 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import useItems from '../../hooks/useItems/useItems';
 
@@ -34,16 +35,45 @@ const ManageItems = () => {
     }
     return (
         <div className='w-50 mx-auto'>
-            <h2> Manage your Services</h2>
+            <h2 className='mt-2 text-center'> Manage Inventories</h2>
             {
                 items.map(item => <div key={item._id}>
-                    <h4>{item.name}
+
+                    {/* <h4>{item.name}
                         <button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button>
-                    </h4>
+                    </h4> */}
+
+
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Item Name </th>
+                                <th>Supplier</th>
+                                <th>Price</th>
+                                <th>Qunatity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>{item.name}</td>
+                                <td>{item.supplier}</td>
+                                <td>{item.quantity}</td>
+                                <td>{item.price}</td>
+                                <td><button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </Table>
+
+
                 </div>
                 )
             }
-           <button className='btn btn-secondary mt-5' onClick={navigateAddNew}>Add New Item</button>
+            <button className='btn btn-secondary mt-5' onClick={navigateAddNew}>Add New Item</button>
 
         </div>
     );
