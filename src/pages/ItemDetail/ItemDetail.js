@@ -67,7 +67,7 @@ const ItemDetail = () => {
 
 
     return (
-        <div>
+        <div className='item-detail-container'>
 
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={item.img} />
@@ -75,8 +75,9 @@ const ItemDetail = () => {
                     <Card.Title>Item Title: {item.name}</Card.Title>
                     <Card.Text>
                         {item.description}
-                        <p>Qunatity: {item.quantity}</p>
-                        <h4>Supplier: {item.supplier}</h4>
+                        <p style={{ fontSize: "20px" }}>price: {item.price}</p>
+                        <p style={{ fontSize: "25px" }}>Qunatity: {item.quantity}</p>
+                        <p>Supplier: {item.supplier}</p>
                     </Card.Text>
                     <button className='btn btn-secondary' onClick={handleUpdateItem}> Delivered </button>
 

@@ -32,7 +32,7 @@ const UpdateStock = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log('success', data)
-                alert('user added successfully!');
+                alert('Quantity Added Successfully!');
                 event.target.reset();
             })
     }
@@ -44,7 +44,7 @@ const UpdateStock = () => {
 
             </h2> */}
             <form onSubmit={handleUpdateItem}>
-                <input type='number' name='quantity' placeholder='Quantity' required></input>
+                <input type='number' name='quantity' placeholder='Add Quantity' required></input>
                 <br />
                 <input type='submit' value='Update Quantity'></input>
             </form>
