@@ -47,7 +47,6 @@ const ManageItems = () => {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>No.</th>
                                 <th>Item Name </th>
                                 <th>Supplier</th>
                                 <th>Price</th>
@@ -57,7 +56,6 @@ const ManageItems = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
                                 <td>{item.name}</td>
                                 <td>{item.supplier}</td>
                                 <td>{item.quantity}</td>

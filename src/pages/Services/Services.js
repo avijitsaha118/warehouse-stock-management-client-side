@@ -1,4 +1,4 @@
-import { faCake, faPeopleCarryBox, faStore, faTruck } from '@fortawesome/free-solid-svg-icons';
+import { faPeopleCarryBox, faStore, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Services.css';
@@ -7,10 +7,11 @@ const Services = () => {
     return (
         <div className="service-box">
             <section className="section-box">
-                <div className="row-item mt-3">
-                    <h2 className="section-title">Our Services</h2>
+                <div className="row-item mb-3">
+                    <h4 className='text-center text-title'>Our Services</h4>
+                    {/* <h2 className="section-title">Our Services</h2> */}
                 </div>
-                <div className="row-item">
+                <div className="row-item mb-5">
                     <div className="column-item">
                         <div className="card-item">
                             <div className="icon-wrapper">
@@ -18,8 +19,7 @@ const Services = () => {
                             </div>
                             <h3 className="service-heading">Warehouse Rent</h3>
                             <p className="paragraph">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-                                consequatur necessitatibus eaque.
+                                We offer our warehouse space for rent to small business owner or local enterpreneur.
                             </p>
                         </div>
                     </div>
@@ -30,20 +30,18 @@ const Services = () => {
                             </div>
                             <h3 className="service-heading">24/7 Pick-Up Facility</h3>
                             <p className="paragraph">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-                                consequatur necessitatibus eaque.
+                                From our warehouse you can pick-up your goods at any time and its called express service.
                             </p>
                         </div>
                     </div>
                     <div className="column-item">
                         <div className="card-item">
                             <div className="icon-wrapper">
-                            <i><FontAwesomeIcon icon={faPeopleCarryBox}></FontAwesomeIcon></i>
+                                <i><FontAwesomeIcon icon={faPeopleCarryBox}></FontAwesomeIcon></i>
                             </div>
                             <h3 className="service-heading">Delivary Option</h3>
                             <p className="paragraph">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-                                consequatur necessitatibus eaque.
+                                Our warehouse to store delivary service is always open and faster than others.
                             </p>
                         </div>
                     </div>

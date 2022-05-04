@@ -20,7 +20,7 @@ const Item = ({ item }) => {
             <h5>Qunatity: {quantity}</h5>
             {/* <p style={{fontSize:"30px"}}>Price: ${price}</p> */}
             <p><small>{description}</small></p>
-            <button onClick={() => navigateToItemDetail(_id)} className='btn btn-success'>Manage</button>
+            <button onClick={() => navigateToItemDetail(_id)} className='btn btn-secondary'>Manage</button>
         </div>
     );
 };

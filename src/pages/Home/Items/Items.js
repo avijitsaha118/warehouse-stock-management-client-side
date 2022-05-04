@@ -16,7 +16,7 @@ const Items = () => {
     return (
         <div id="services" className='container'>
             <div className='row'>
-                <h1 className='services-title mt-3 text-success'>Warehouse Fruits Items</h1>
+                <h1 className='services-title mt-3 text-secondary'>Warehouse Fruits Items</h1>
                 <div className='services-container'>
                     {
                         items.map(item => <Item
