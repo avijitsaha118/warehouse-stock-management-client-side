@@ -21,7 +21,7 @@ const MyItem = () => {
 
         const getOrders = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://arcane-everglades-80652.herokuapp.com/myitem?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 // const { data } = await axios.get(url, {
@@ -47,7 +47,7 @@ const MyItem = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://arcane-everglades-80652.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

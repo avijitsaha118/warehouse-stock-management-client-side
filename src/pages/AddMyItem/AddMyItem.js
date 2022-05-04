@@ -26,7 +26,7 @@ const AddMyItem = () => {
             img: event.target.img.value,
         }
 
-        axios.post('http://localhost:5000/myitem', myitem)
+        axios.post('https://arcane-everglades-80652.herokuapp.com/myitem', myitem)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

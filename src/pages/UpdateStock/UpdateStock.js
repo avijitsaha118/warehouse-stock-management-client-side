@@ -6,7 +6,7 @@ const UpdateStock = () => {
     // console.log(itemId);
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -21,7 +21,7 @@ const UpdateStock = () => {
         const updatedItem = { quantity };
 
         //send data to the server
-       const url= `http://localhost:5000/item/${itemId}`;
+       const url= `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
        fetch(url, {
             method: 'PUT',
             headers: {

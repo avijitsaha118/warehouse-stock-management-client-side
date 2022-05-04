@@ -17,6 +17,7 @@ import MyItem from './pages/MyItem/MyItem';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
 
         <Route path='/blogs' element={<Blog></Blog>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/about' element={<AboutUs></AboutUs>}></Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
 

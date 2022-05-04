@@ -8,28 +8,28 @@ const Contact = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 mr-auto">
                         <div className="mb-5">
-                            <h3 className="text-white mb-4">Contact Info</h3>
-                            <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus blanditiis, perferendis aliquam.</p>
+                            <h3 className="text-secondary mb-4 text-center">Contact Info</h3>
+                            <p className="text-white text-center">You can contact us anytime and visit our online warehouse inventories website also. Just login and manage your item easily from here.</p>
                         </div>
                         <div className="row">
                             <div className="col-md-6">
-                                <h3 className="text-white h5 mb-3">London</h3>
+                                <h3 className="text-white h5 mb-3">Dhaka</h3>
                                 <ul className="list-unstyled mb-5">
                                     <li className="d-flex text-white mb-2">
-                                        <span className="mr-3"><span className="icon-map"></span></span> 34 Street Name, City Name Here, United States
+                                        <span className="mr-3">8/C, Subranagram</span>
                                     </li>
-                                    <li className="d-flex text-white mb-2"><span className="mr-3"><span className="icon-phone"></span></span> +1 (222) 345 6789</li>
-                                    <li className="d-flex text-white"><span className="mr-3"><span className="icon-envelope-o"></span></span> info@mywebsite.com </li>
+                                    <li className="d-flex text-white mb-2"><span className="mr-3"><span className="icon-phone"></span></span> +8801777000222</li>
+                                    <li className="d-flex text-white"><span className="mr-3"><span className="icon-envelope-o"></span></span>coolwarehouse@country.com</li>
                                 </ul>
                             </div>
                             <div className="col-md-6">
-                                <h3 className="text-white h5 mb-3">New York</h3>
+                                <h3 className="text-white h5 mb-3">Cox's Bazar</h3>
                                 <ul className="list-unstyled mb-5">
                                     <li className="d-flex text-white mb-2">
-                                        <span className="mr-3"><span className="icon-map"></span></span> 34 Street Name, City Name Here, United States
+                                        <span className="mr-3">54, Raipur, Near Hill</span>
                                     </li>
-                                    <li className="d-flex text-white mb-2"><span className="mr-3"><span className="icon-phone"></span></span> +1 (222) 345 6789</li>
-                                    <li className="d-flex text-white"><span className="mr-3"><span className="icon-envelope-o"></span></span> info@mywebsite.com </li>
+                                    <li className="d-flex text-white mb-2"><span className="mr-3"><span className="icon-phone"></span></span> +8801770001111</li>
+                                    <li className="d-flex text-white"><span className="mr-3"><span className="icon-envelope-o"></span></span> coldwarehousecz@country.com </li>
                                 </ul>
                             </div>
                         </div>
@@ -37,7 +37,7 @@ const Contact = () => {
 
                     <div className="col-lg-6">
                         <div className="box">
-                            <h3 className="heading">Send us a message</h3>
+                            <h4 style={{fontSize: '15px'}} className="text-secondary mb-4 text-center ">Send us a Message</h4>
                             <form className="mb-5" method="post" id="contactForm" name="contactForm">
                                 <div className="row">
 
