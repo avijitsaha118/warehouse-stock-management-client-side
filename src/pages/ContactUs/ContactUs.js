@@ -27,8 +27,8 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="right-side">
-            <div className="topic-text">Send us a message</div>
-            <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+            <div className="topic-text">Need a cold storage in our warehouse for your business? <br /> Send us a message</div>
+            <p className='text-secondary' style={{ fontSize: '15px' }}>If you look a cold place for your business to store your fruits item then our warehouse is right place for you. To booking your space or any types of quries related to our warehouse, you can send us message from here. It's our pleasure to help you.</p>
             <form action="#">
               <div className="input-box">
                 <input type="text" placeholder="Enter your name" />
