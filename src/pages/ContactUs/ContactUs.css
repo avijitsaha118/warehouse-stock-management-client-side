@@ -85,7 +85,8 @@
 .content .right-side .topic-text{
   font-size: 23px;
   font-weight: 600;
-  color: #3e2093;
+  color: #6C757D;
+  /* color: #3e2093; */
 }
 .right-side .input-box{
   height: 50px;
@@ -121,7 +122,8 @@
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: #6f6be6;
+  /* background: #6f6be6; */
+  background: #6C757D;
   /* background: #3e2093; */
   cursor: pointer;
   transition: all 0.3s ease;

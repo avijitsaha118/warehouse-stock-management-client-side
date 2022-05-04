@@ -15,6 +15,7 @@ import Footer from './shared/Footer/Footer';
 import AddMyItem from './pages/AddMyItem/AddMyItem';
 import MyItem from './pages/MyItem/MyItem';
 import NotFound from './pages/NotFound/NotFound';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
@@ -54,9 +55,12 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/blogs' element={<Blog></Blog>}></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
+
       <Footer></Footer>
 
     </>

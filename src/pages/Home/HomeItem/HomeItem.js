@@ -11,9 +11,32 @@ const HomeItem = ({ item }) => {
         navigate(`/item/${id}`)
     }
     return (
-        <div className='service'>
+        <div>
 
-            <div className="height d-flex justify-content-center align-items-center">
+            <div class="a-box">
+                <div class="img-container">
+                    <div class="img-inner">
+                        <div class="inner-skew">
+                            <img src={img}/>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h3>{name}</h3>
+                    <div>
+                        <p><smal>{description}</smal></p>
+                        <p><strong>Supplier Name:{supplier}</strong></p>
+                        <h3>Price {price} BDT</h3>
+                        <h5>Qunatity: {quantity}</h5>
+                        <div className="sub-main">
+                            <button onClick={() => navigateToItemDetail(_id)} className="button-two"><span>Manage</span></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {/* <div className="height d-flex justify-content-center align-items-center">
 
                 <div className="card p-3">
 
@@ -21,9 +44,9 @@ const HomeItem = ({ item }) => {
                         <div className="mt-2">
                             <h4 className="text-uppercase">{name}</h4>
                             <div className="mt-5">
-                                <h1 style={{fontSize:"25px"}} className="main-heading mt-0">Price: {price}</h1>
-                                <br/>
-                                <h1 style={{fontSize:"25px"}} className="main-heading mt-0">Qunatity: {quantity}</h1>
+                                <h1 style={{ fontSize: "25px" }} className="main-heading mt-0">Price: {price}</h1>
+                                <br />
+                                <h1 style={{ fontSize: "25px" }} className="main-heading mt-0">Qunatity: {quantity}</h1>
                                 <p className="mb-0"><strong>Supplier Name:</strong> {supplier}</p>
                             </div>
                         </div>
@@ -33,21 +56,21 @@ const HomeItem = ({ item }) => {
                     </div>
 
 
-                    <p> Description: {description} </p>
+                    <p> Description: {description} </p> */}
 
-                    {/* <button onClick={() => navigateToItemDetail(_id)} className="btn btn-danger">Manage</button> */}
+                {/* <button onClick={() => navigateToItemDetail(_id)} className="btn btn-danger">Manage</button> */}
 
-                    <div className="sub-main">
-      <button onClick={() => navigateToItemDetail(_id)} className="button-two"><span>Manage</span></button>
-    </div>
+                {/* <div className="sub-main">
+                        <button onClick={() => navigateToItemDetail(_id)} className="button-two"><span>Manage</span></button>
+                    </div>
 
 
                 </div>
 
-            </div>
+            </div> */}
 
-          
-            {/* <img className='w-100' src={img} alt='' />
+
+                {/* <img className='w-100' src={img} alt='' />
             <h2>
                 {name}
             </h2>
@@ -59,15 +82,7 @@ const HomeItem = ({ item }) => {
             <button onClick={() => navigateToItemDetail(_id)} className='btn btn-success'>Manage</button> */}
 
 
-
-
-
-
-
-
-
-
-           
+            </div>
         </div>
     );
 };
