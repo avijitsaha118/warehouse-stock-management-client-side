@@ -5,92 +5,51 @@ import banner2 from '../../../images/banner/banner2.jpg'
 import banner3 from '../../../images/banner/banner3.jpg'
 
 const Banner = () => {
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
-    return (
-        // <Carousel activeIndex={index} onSelect={handleSelect}>
-        //     <Carousel.Item>
-        //         <img
-        //             className="d-block w-100"
-        //             src={banner1}
-        //             alt="First slide"
-        //         />
-        //         <Carousel.Caption>
-        //             <h3>Good Consultancy puts you one step ahead</h3>
-        //             <p>Tax planning is a very important part for you or your company.</p>
-             
-        //         </Carousel.Caption>
-        //     </Carousel.Item>
-        //     <Carousel.Item>
-        //         <img
-        //             className="d-block w-100"
-        //             src={banner2}
-        //             alt="Second slide"
-        //         />
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+  return (
 
-        //         <Carousel.Caption>
-        //             <h3 className='text-dark'>My analysis make your business tax management hasssle free.</h3>
-        //             <p>Perfect analysis save your company from future audit. </p>
-        //         </Carousel.Caption>
-        //     </Carousel.Item>
-        //     <Carousel.Item>
-        //         <img
-        //             className="d-block w-100"
-        //             src={banner3}
-        //             alt="Third slide"
-        //         />
+    <Carousel fade activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Best warehouse maintenance capability.</h3>
+          <p>Without any damage we maintain our product and handle everything smoothly.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Second slide"
+        />
 
-        //         <Carousel.Caption>
-        //             <h3 className='text-dark'>My experienced suggestions make everything easy about Taxes. </h3>
-        //             <p>
-        //             Your income statement or company turnover assessment analysis help you to make a batter tax payer.
-        //             </p>
-        //         </Carousel.Caption>
-        //     </Carousel.Item>
-        // </Carousel>
+        <Carousel.Caption>
+          <h3 className='text-dark'>All our worker well experiencede in this field.</h3>
+          <p className='text-dark'>No doubt you experience and meet best warehouse management system from here. Stay with us.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner3}
+          alt="Third slide"
+        />
 
-
-        <Carousel fade activeIndex={index} onSelect={handleSelect}>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={banner1}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={banner2}
-      alt="Second slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={banner3}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-    );
+        <Carousel.Caption>
+          <h3>Service and delevary part is most important.</h3>
+          <p>Our 24/7 pickup and express delevary facility will make you happpy.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
 };
 
 export default Banner;

@@ -30,7 +30,7 @@ const Footer = () => {
                             </div>
                             <div className="col-md-6 item text">
                                 <h3>Country Cool Fruits Warehouse</h3>
-                                <p> Contact: +068856249</p>
+                                <p> Contact: +8801777000222</p>
                                 <p>Email: coolwarehouse@country.com</p>
                             </div>
                         </div>
