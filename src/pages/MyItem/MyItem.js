@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
@@ -15,7 +16,7 @@ const MyItem = () => {
     const [user] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
 
-    console.log(myItems);
+    // console.log(myItems);
     const navigate = useNavigate();
     useEffect(() => {
 
@@ -24,11 +25,13 @@ const MyItem = () => {
             const url = `https://arcane-everglades-80652.herokuapp.com/myitem?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
+
                 // const { data } = await axios.get(url, {
                 //     headers: {
                 //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 //     }
                 // });
+                
                 setMyItems(data);
             }
             catch (error) {
@@ -64,25 +67,30 @@ const MyItem = () => {
         <div>
             <h2>
                 My Item :{myItems.length}
-               
+
             </h2>
             <div className='item-container'>
 
-            {
-                myItems.map(item => <div key={item._id}>
-                    <h4>{item.name}
-                        <button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button>
-                    </h4>
-                </div>
-                )
-            }
-               
+                {
+                    myItems.map(item => <div key={item._id}>
 
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>{item.name} </th>
+                                    <th>Quantity: {item.quantity}</th>
+                                    <th><button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button></th>
+                                </tr>
+                            </thead>
+                        </Table>
+                    </div>
+                    )
+                }
                 {/* {
                     myItems.map(item => <MyItems
                         key={item._id}
                         item={item}
-                    ></MyItems>)
+                    ></MyItems>
                 } */}
             </div>
         </div>

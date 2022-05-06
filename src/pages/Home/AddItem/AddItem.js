@@ -5,7 +5,7 @@ const AddItem = (event) => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `https://arcane-everglades-80652.herokuapp.com/item`;
+        const url = `http://localhost:5000/item`;
         fetch(url, {
             method: 'POST',
             headers: {
