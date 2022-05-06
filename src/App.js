@@ -21,29 +21,29 @@ import AboutUs from './pages/AboutUs/AboutUs';
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <Header></Header>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/item/:itemId' element={
-<RequireAuth>
-<ItemDetail></ItemDetail>
-</RequireAuth>
+          <RequireAuth>
+            <ItemDetail></ItemDetail>
+          </RequireAuth>
 
         }></Route>
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        
+
         <Route path='/item/myitem' element={
           <RequireAuth><AddMyItem></AddMyItem></RequireAuth>
         }></Route>
-        
-<Route path='/myitems' element={<RequireAuth>
-  <MyItem></MyItem>
-</RequireAuth>}></Route>
+
+        <Route path='/myitems' element={<RequireAuth>
+          <MyItem></MyItem>
+        </RequireAuth>}></Route>
 
         <Route path='/additem' element={
           <RequireAuth>
@@ -51,7 +51,7 @@ function App() {
           </RequireAuth>
         }></Route>
 
-<Route path='/manage' element={
+        <Route path='/manage' element={
           <RequireAuth>
             <ManageItems></ManageItems>
           </RequireAuth>
@@ -67,7 +67,7 @@ function App() {
 
       <Footer></Footer>
 
-    </>
+    </div>
   );
 }
 

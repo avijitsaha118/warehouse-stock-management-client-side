@@ -7,7 +7,7 @@ import { faTwitter, faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-
 
 const Footer = () => {
     return (
-        <>
+        <div className='footer-container'>
             <div className="footer-dark mt-3">
                 <footer>
                     <div className="container">
@@ -49,7 +49,7 @@ const Footer = () => {
 
                 </footer>
             </div>
-        </>
+        </div>
     );
 };
 
