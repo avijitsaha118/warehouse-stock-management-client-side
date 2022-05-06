@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const AddMyItem = () => {
 
@@ -30,7 +30,7 @@ const AddMyItem = () => {
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('your item is added!');
+                    toast('Item Added Successfully!');
 
                     event.target.reset();
                 }
@@ -58,6 +58,7 @@ const AddMyItem = () => {
                 <br />
                 <input className='btn btn-primary' type='submit' value='Add Item'></input>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
