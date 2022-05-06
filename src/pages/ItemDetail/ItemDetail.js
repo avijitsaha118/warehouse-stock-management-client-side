@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Card, Form } from 'react-bootstrap';
+import React, { useEffect } from 'react';
+import { Card } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import useItemDetail from '../../hooks/useItemDetail/useItemDetail';
 import useItems from '../../hooks/useItems/useItems';
-import Delivered from '../Home/Delivered/Delivered';
 import UpdateStock from '../UpdateStock/UpdateStock';
 
 const ItemDetail = () => {
@@ -15,9 +14,7 @@ const ItemDetail = () => {
 
     const navigate = useNavigate();
 
-    // if (user) {
-    //     navigate('/item');
-    // }
+
     const navigateManage = event => {
         navigate('/manage');
         // navigate('/items');
