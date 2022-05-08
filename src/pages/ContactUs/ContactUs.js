@@ -22,8 +22,8 @@ const ContactUs = () => {
             <div className="email details">
               <i className="fas fa-envelope"></i>
               <div className="topic">Email</div>
-              <div className="text-two">info.coldbdwhm@gmail.com</div>
-              <div className="text-one">coldbd@gmail.com</div>
+              <div className="text-two">info.fruitswarehouse@gmail.com</div>
+              <div className="text-one">fruitwhcold@gmail.com</div>
             </div>
           </div>
           <div className="right-side">
