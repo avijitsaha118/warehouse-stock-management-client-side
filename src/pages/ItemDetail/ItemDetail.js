@@ -9,11 +9,7 @@ const ItemDetail = () => {
     const { itemId } = useParams();
     const [item, setItem] = useItemDetail(itemId);
 
-    const [items, setItems] = useItems();
-
-
     const navigate = useNavigate();
-
 
     const navigateManage = event => {
         navigate('/manage');
@@ -28,7 +24,7 @@ const ItemDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [itemId]);
+    }, [itemId, item]);
 
     const handleUpdateItem = event => {
         event.preventDefault();
@@ -39,8 +35,6 @@ const ItemDetail = () => {
 
         const updatedItem = { quantity };
         // console.log(quantity);
-
-
         //send data to the server
         const url = `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
         fetch(url, {
@@ -78,9 +72,6 @@ const ItemDetail = () => {
                     </Card.Text>
                     <button className='btn btn-secondary' onClick={handleUpdateItem}> Delivered </button>
 
-                    {/* <Delivered></Delivered> */}
-
-                    {/* <Button variant="secondary">Delivered</Button> */}
                 </Card.Body>
             </Card>
 
@@ -88,6 +79,8 @@ const ItemDetail = () => {
 
             <div>
                 <h2>
+                    <p style={{ fontSize: '15px' }}>N:B: Please wait 1-3 Second after clicked Deliverd or Update Quantity
+                    </p>
                     Update Qunatity of {item.name}
 
                 </h2>

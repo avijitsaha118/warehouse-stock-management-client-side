@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useItemDetail from '../../hooks/useItemDetail/useItemDetail';
 
 const UpdateStock = () => {
     const { itemId } = useParams();
     // console.log(itemId);
-    const [item, setItem] = useState({});
+
+    const [item, setItem] = useItemDetail(itemId);
     useEffect(() => {
         const url = `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [itemId]);
+    }, [itemId, item]);
 
     const handleUpdateItem = event => {
         event.preventDefault();
        
-        const quantity = item.quantity + parseInt(event.target.quantity.value)
+        const quantity = parseInt(event.target.quantity.value) + item.quantity ;
         // console.log(quantity);
 
         const updatedItem = { quantity };

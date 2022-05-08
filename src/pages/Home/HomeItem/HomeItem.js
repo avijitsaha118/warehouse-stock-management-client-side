@@ -23,7 +23,7 @@ const HomeItem = ({ item }) => {
                 <div className="text-container">
                     <h3>{name}</h3>
                     <div>
-                        <p><smal>{description}</smal></p>
+                        <p><small>{description}</small></p>
                         <p><strong>Supplier Name:{supplier}</strong></p>
                         <h3>Price {price} BDT</h3>
                         <h5>Qunatity: {quantity}</h5>

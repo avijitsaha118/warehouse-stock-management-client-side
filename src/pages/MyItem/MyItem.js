@@ -1,23 +1,17 @@
-import { async } from '@firebase/util';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
-import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
-import useItems from '../../hooks/useItems/useItems';
-import MyItems from '../MyItems/MyItems';
 
 const MyItem = () => {
     const [user] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
 
     // console.log(myItems);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     useEffect(() => {
 
         const getOrders = async () => {
@@ -31,7 +25,7 @@ const MyItem = () => {
                 //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 //     }
                 // });
-                
+
                 setMyItems(data);
             }
             catch (error) {
@@ -46,7 +40,7 @@ const MyItem = () => {
     }, [user])
 
 
-    const [items, setItems] = useItems();
+    // const [items, setItems] = useItems();
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
@@ -69,30 +63,24 @@ const MyItem = () => {
                 My Item :{myItems.length}
 
             </h2>
-            <div className='item-container'>
 
-                {
-                    myItems.map(item => <div key={item._id}>
+            {
+                myItems.map(item => <div key={item._id}>
 
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>{item.name} </th>
-                                    <th>Quantity: {item.quantity}</th>
-                                    <th><button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button></th>
-                                </tr>
-                            </thead>
-                        </Table>
-                    </div>
-                    )
-                }
-                {/* {
-                    myItems.map(item => <MyItems
-                        key={item._id}
-                        item={item}
-                    ></MyItems>
-                } */}
-            </div>
+                    <Table responsive="sm">
+                        <thead>
+                            <tr>
+                                <th>Item Name: {item.name}</th>
+                                <th>Quantity: {item.quantity}</th>
+                                <th>Supplier: {item.supplier}</th>
+                                <th><button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button></th>
+                            </tr>
+                        </thead>
+                    </Table>
+                </div>
+                )
+            }
+
         </div>
     );
 };

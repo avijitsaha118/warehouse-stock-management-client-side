@@ -42,9 +42,8 @@ const ManageItems = () => {
                     {/* <h4>{item.name}
                         <button className='btn btn-danger' onClick={() => handleDelete(item._id)}><i><FontAwesomeIcon icon={faTrash} /></i> Delete</button>
                     </h4> */}
-
-
-                    <Table striped bordered hover>
+                  <>
+                    <Table responsive="sm" striped bordered hover>
                         <thead>
                             <tr>
                                 <th>Item Name </th>
@@ -66,7 +65,7 @@ const ManageItems = () => {
 
                         </tbody>
                     </Table>
-
+                    </>
 
                 </div>
                 )

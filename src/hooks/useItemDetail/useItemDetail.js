@@ -9,7 +9,7 @@ const useItemDetail = itemId =>{
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [itemId]);
+    }, [itemId, item]);
     return [item]
 }
 
