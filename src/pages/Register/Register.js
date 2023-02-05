@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../../pages/Login/SocialLogin/SocialLogin';
-import { async } from '@firebase/util';
 import Loading from '../../shared/Loading/Loading';
 import './Register.css';
 
@@ -35,10 +34,6 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        // const agree = event.target.terms.checked;
-        // if(agree){
-        //     createUserWithEmailAndPassword(email, password);
-        // }
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
