@@ -20,7 +20,7 @@ const ItemDetail = () => {
     // console.log(itemId);
     // const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
+        const url = `http://localhost:5000/item/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -36,7 +36,7 @@ const ItemDetail = () => {
         const updatedItem = { quantity };
         // console.log(quantity);
         //send data to the server
-        const url = `https://arcane-everglades-80652.herokuapp.com/item/${itemId}`;
+        const url = `http://localhost:5000/item/${itemId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

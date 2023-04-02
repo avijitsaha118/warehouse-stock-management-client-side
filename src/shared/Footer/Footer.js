@@ -44,7 +44,7 @@ const Footer = () => {
                             <li><a href="#"><i><FontAwesomeIcon icon={faYoutube} /></i></a></li>
                             <li><a href="#"><i><FontAwesomeIcon icon={faWhatsapp} /></i></a></li>
                         </ul>
-                        <p className="copyright">Fruits Warehouse Management © 2022</p>
+                        <p className="copyright">Fruits Warehouse Management © 2023</p>
                     </div>
 
                 </footer>

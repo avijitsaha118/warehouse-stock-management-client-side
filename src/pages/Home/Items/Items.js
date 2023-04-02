@@ -8,7 +8,7 @@ const Items = () => {
     const [items, setItems] = useItems();
 
     // useEffect(() => {
-    //     fetch('https://arcane-everglades-80652.herokuapp.com/item')
+    //     fetch('http://localhost:5000/item')
     //         .then(res => res.json())
     //         .then(data => setItems(data))
     // }, [])

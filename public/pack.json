@@ -1,0 +1,13 @@
+[
+    {"id":1,
+    "name":"Coconut",
+    "description":"To maintain the best quality we kept our Coconuts under 20°C. For That, it is to remain the same and fresh. We do not store coconut for more than three months to maintain quality.",
+    "price":"70",
+    "quantity":"400",
+    "supplier":"Coconuts Republic",
+    "img":"https://i.ibb.co/9W6nWr8/coconut.jpg"},
+    {"id":2,"name":"Orange","price":"250","quantity": "250","supplier":"Orange Mart","description":"In our warehouse Oranges are kept in under 20 °C . For That, it is to remain healthy and fresh. We do not store oranges for more than two weeks to maintain quality. ","img":" https://i.ibb.co/T8Yhcfs/orange.jpg "},
+    {"id":3,"name":"Strawberry","description":"Strawberries are kept in under 17°C temperature in our warehouse. For that, the color, the test, the quality everything is fine. The duration period of storing strawberries is sixty days.","price":"180","quantity":"300","supplier":"Red Fruits","img":"https://i.ibb.co/nf9WGvR/strabery.jpg"},
+    {"id":4,"name":"Green Apple","description":"Our warehouse green apple called one of the best green apple in the city. We kept it in under 18°C without any chemical or formalin. Period of storing green apples is one month. ","price":"200","quantity": "649","supplier":"Fresh Fruits","img":"https://i.ibb.co/HNzqnbf/green-apple.jpg"}
+
+]
